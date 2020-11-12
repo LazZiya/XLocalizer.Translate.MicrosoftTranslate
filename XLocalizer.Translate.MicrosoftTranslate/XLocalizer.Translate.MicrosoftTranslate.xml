@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XLocalizer.Translate.MicrosoftTranslate</name>
+    </assembly>
+    <members>
+        <member name="T:XLocalizer.Translate.MicrosoftTranslate.MicrosoftTranslateRequestText">
+            <summary>
+            Microsoft translate request object.
+            This object will be converted to json to be submitted with the post request
+            </summary>
+        </member>
+        <member name="P:XLocalizer.Translate.MicrosoftTranslate.MicrosoftTranslateRequestText.Text">
+            <summary>
+            The text to be translated
+            </summary>
+        </member>
+        <member name="T:XLocalizer.Translate.SystranTranslate.MicrosoftTranslateResult">
+            <summary>
+            Microsoft translate result
+            </summary>
+        </member>
+        <member name="P:XLocalizer.Translate.SystranTranslate.MicrosoftTranslateResult.Translations">
+            <summary>
+            Translations
+            </summary>
+        </member>
+        <member name="T:XLocalizer.Translate.SystranTranslate.MicrosoftResultTranslation">
+            <summary>
+            translate result output
+            </summary>
+        </member>
+        <member name="P:XLocalizer.Translate.SystranTranslate.MicrosoftResultTranslation.Text">
+            <summary>
+            translated text
+            </summary>
+        </member>
+        <member name="P:XLocalizer.Translate.SystranTranslate.MicrosoftResultTranslation.To">
+            <summary>
+            Target culture
+            </summary>
+        </member>
+        <member name="T:XLocalizer.Translate.SystranTranslate.MicrosoftTranslateService">
+            <summary>
+            Microsoft Translate service over Azure cognitive services
+            for subscription visit <a href="https://azure.microsoft.com/en-us/services/cognitive-services/translator/">Microsoft Translator Azure Services</a>
+            </summary>
+        </member>
+        <member name="P:XLocalizer.Translate.SystranTranslate.MicrosoftTranslateService.ServiceName">
+            <summary>
+            Service name
+            </summary>
+        </member>
+        <member name="M:XLocalizer.Translate.SystranTranslate.MicrosoftTranslateService.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{XLocalizer.Translate.SystranTranslate.MicrosoftTranslateServiceRapidApi})">
+            <summary>
+            Initialize Microsoft translate service, for subscription visit <a href="https://azure.microsoft.com/en-us/services/cognitive-services/translator/">Microsoft Translator Text Azure Services</a>
+            </summary>
+            <param name="httpClient"></param>
+            <param name="configuration"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:XLocalizer.Translate.SystranTranslate.MicrosoftTranslateService.TranslateAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Run async translation task
+            </summary>
+            <param name="source">Source language e.g. en</param>
+            <param name="target">Target language e.g. tr</param>
+            <param name="text">Text to be translated</param>
+            <param name="format">Text format: html or text</param>
+            <returns><see cref="T:XLocalizer.Translate.TranslationResult"/></returns>
+        </member>
+        <member name="M:XLocalizer.Translate.SystranTranslate.MicrosoftTranslateService.TryTranslate(System.String,System.String,System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <param name="text"></param>
+            <param name="translation"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLocalizer.Translate.SystranTranslate.MicrosoftTranslateServiceRapidApi">
+            <summary>
+            Microsoft Translate service over RapidApi.
+            for subscription visit <a href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/microsoft-translator-text/endpoints">Microsoft Translator Text</a>
+            </summary>
+        </member>
+        <member name="P:XLocalizer.Translate.SystranTranslate.MicrosoftTranslateServiceRapidApi.ServiceName">
+            <summary>
+            Service name
+            </summary>
+        </member>
+        <member name="M:XLocalizer.Translate.SystranTranslate.MicrosoftTranslateServiceRapidApi.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{XLocalizer.Translate.SystranTranslate.MicrosoftTranslateServiceRapidApi})">
+            <summary>
+            Initialize Microsoft translate service, for subscription visit <a href="https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/microsoft-translator-text/endpoints">Microsoft Translator Text</a>
+            </summary>
+            <param name="httpClient"></param>
+            <param name="configuration"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:XLocalizer.Translate.SystranTranslate.MicrosoftTranslateServiceRapidApi.TranslateAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Run async translation task
+            </summary>
+            <param name="source">Source language e.g. en</param>
+            <param name="target">Target language e.g. tr</param>
+            <param name="text">Text to be translated</param>
+            <param name="format">Text format: html or text</param>
+            <returns><see cref="T:XLocalizer.Translate.TranslationResult"/></returns>
+        </member>
+        <member name="M:XLocalizer.Translate.SystranTranslate.MicrosoftTranslateServiceRapidApi.TryTranslate(System.String,System.String,System.String,System.String@)">
+            <summary>
+            
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <param name="text"></param>
+            <param name="translation"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
