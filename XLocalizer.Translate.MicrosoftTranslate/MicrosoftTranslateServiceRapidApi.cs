@@ -34,7 +34,7 @@ namespace XLocalizer.Translate.SystranTranslate
         {
             _httpClient = httpClient ?? throw new NullReferenceException(nameof(httpClient));
             
-            var _rapidApiKey = configuration["XLocalizer.Translate:RapidApiKey"] ?? throw new NullReferenceException("RapidApi key not found");
+            var _rapidApiKey = configuration["XLocalizer.Translate:RapidApiKey"] ?? throw new NullReferenceException("Configuration key for RapidApi was not found! For more details see https://docs.ziyad.info/en/XLocalizer/v1.0/translate-services-microsoft.md");
 
             _httpClient.DefaultRequestHeaders.Add("x-rapidapi-key", _rapidApiKey);
             _httpClient.DefaultRequestHeaders.Add("x-rapidapi-host", "microsoft-translator-text.p.rapidapi.com");

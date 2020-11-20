@@ -30,11 +30,14 @@ namespace XLocalizer.Translate.SystranTranslate
         /// <param name="httpClient"></param>
         /// <param name="configuration"></param>
         /// <param name="logger"></param>
-        public MicrosoftTranslateService(HttpClient httpClient, IConfiguration configuration, ILogger<MicrosoftTranslateServiceRapidApi> logger)
+        public MicrosoftTranslateService(HttpClient httpClient, IConfiguration configuration, ILogger<MicrosoftTranslateService> logger)
         {
+            _logger = logger;
+
             _httpClient = httpClient ?? throw new NullReferenceException(nameof(httpClient));
 
-            var _key = configuration["XLocalizer.Translate:Microsoft:Key"] ?? throw new NullReferenceException("RapidApi key not found");
+            var _key = configuration["XLocalizer.Translate:Microsoft:Key"] ?? throw new NullReferenceException("Configuration key for XLocalizer.Translate.MicrosoftTranslate was not found! For more details see https://docs.ziyad.info/en/XLocalizer/v1.0/translate-services-microsoft.md"); ;
+
             var _region = configuration["XLocalizer.Translate:Microsoft:Region"];
 
             _httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", _key);
@@ -42,7 +45,6 @@ namespace XLocalizer.Translate.SystranTranslate
             if (!string.IsNullOrWhiteSpace(_region))
                 _httpClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Region", _region);
 
-            _logger = logger;
         }
 
         /// <summary>
