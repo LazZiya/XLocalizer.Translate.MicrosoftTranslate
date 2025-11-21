@@ -1,4 +1,4 @@
 # XLocalizer.Translate.MicrosoftTranslate
 Microsoft translation services for XLocalizer
 
-For all documentations visit: [DOCS.Ziyad.info](https://docs.ziyad.info)
+For all documentations visit: [DOCS.Ziya.info.tr](https://docs.ziya.info.tr)
